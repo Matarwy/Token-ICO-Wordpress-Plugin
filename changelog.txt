@@ -1,0 +1,106 @@
+== Changelog ==
+
+= 1.11.3 =
+
+* openexchangerates.org fix if App Id is not provided
+
+= 1.11.2 =
+
+* Infura.io legacy API authentication [deprecation](https://blog.infura.io/infura-dashboard-transition-update-c670945a922a)
+
+= 1.11.1 =
+
+* [EIP 1102](https://eips.ethereum.org/EIPS/eip-1102) support
+* Load plugin scripts only if some shortcode is used on a page
+
+= 1.11.0 =
+
+* New shortcodes are added for easier token sale widget customization: `[token-ico-limit]`, `[token-ico-input]`, `[token-ico-input-currency]`, `[token-ico-buy-button]`, `[token-ico-currency-list]`
+* Shortcodes for current progress value `[token-ico-progress-value]` and percent `[token-ico-progress-percent]` are added
+
+= 1.10.3 =
+
+* Fix the purchases table for contracts which do not send tokens immediately
+
+= 1.10.2 =
+
+* Upgrade web3.js to the latest stable release v0.20.6
+
+= 1.10.1 =
+
+* Fix token amount calculation for purchases table if token rate is set incorrectly.
+
+= 1.10.0 =
+
+* Ability to set base currency to display in token sell widget, progress bar and tx table
+* Private sale seed setting
+* Correct progress bar value in test networks
+* Progress bar values rounding fix
+
+= 1.9.0 =
+
+* l10n support is implemented
+* Russian language translation is added
+
+= 1.8.0 =
+
+* Font Awesome copy icon for the affiliate link feature
+
+= 1.7.1 =
+
+* PHP 5.6 compatibility fix
+
+= 1.7.0 =
+
+* Use shortcode `[token-ico-referral]` to display a referral address field. User can copy it and send to friends. If they buy tokens while opened this referral link, your `Crowdsale` contract would get a referral address in the `Data` field. Your `Crowdsale` contract should be able to work with it.
+* The `GAS limit` option takes effect in the MetaMask now
+* The `GAS price` option is added and takes effect in the MetaMask
+
+= 1.6.5 =
+
+* Mobile display fix for themes with no bootstrap included
+* Tx URL fix for test networks
+
+= 1.6.4 =
+
+* Namespaced bootstrap4 is used to prevent any theme conflicts: [bootstrap-namespaced](https://github.com/jonasjancarik/bootstrap-namespaced)
+* Bootstrap version is updated from v3 to v4
+
+= 1.6.3 =
+
+* Register bootstrap only if it is not registered yet to not break theme using bootstrap4
+* Improoved API call results caching 
+
+= 1.6.2 =
+
+* Unnecessary API calls removed. `LOG` records added to help troubleshoot cache issues.
+
+= 1.6.1 =
+
+* Fix AJAX error in some themes
+
+= 1.6.0 =
+
+* Test networks like ropsten or rinkeby support is added
+
+= 1.5.X or less =
+
+* 1.5.1 Compatibility issues fixed for other plugins using web3 object
+* 1.5.0 Airdrop support is added. Just set the minimum allowed setting to zero and the Crowdsale address to your airdrop contract.
+* 1.4.0 Two new shortcodes are introduced: `[token-ico-balance]` to show tokens balance on the current user account and 
+`[token-ico-purchases]` to display a table of recent token purchases by anyone, or by the current user.
+No new admin settings are introduced in this version.
+* 1.3.3 Improved compatibility with other plugins and themes.
+Improved error handling and reporting.
+* 1.3.2 An elementor plugin conflict with the web3.js library is fixed
+The ICO progress now shortens values with 1.1K and 1.1M instead of 1100ETH and 1100000ETH respectively.
+* 1.3.1 A simple ICO progress bar shortcode is introduced: `[token-ico-progress]`.
+The `[token-ico]` shortcode markup is rewritten with bootstrap grid styles for best WP themes and mobile devices compatibility.
+The button styles now are WP theme related. It uses the standard `button` CSS class. You can customize it within your theme settings.
+* 1.2.0 Minimum and maximum ether amount can be specified to workaround some legal issues.
+* 1.1.2 Include bootstrap CSS for some classes used.
+* 1.1.1 Bug in the free plugin version is fixed.
+* 1.1.0 Select a list of any currencies supported by the openexchangerates.org to convert the price to. 
+Optionally, show icons for coins, including your own token.
+* 1.0.3 Wrong decimals usage fixed
+* 1.0.0 The initial release.
